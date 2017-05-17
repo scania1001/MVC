@@ -1,0 +1,39 @@
+﻿@model List<HomeworkOfMoney.Models.MyClass>
+
+@{
+    ViewBag.Title = "add_data";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <table class="table table-bordered table-hover">
+            <tr>
+                <th>#</th>
+                <th>類別</th>
+                <th>日期</th>
+                <th>金額</th>
+                <th>備註</th>
+            </tr>
+            @{int i = 0;}
+            @foreach (var data in Model)
+            {
+                if (@data.category == "支出")
+                {
+                    
+                }
+                else
+                {
+
+                }
+                i += 1;
+                <tr style="background-color:beige">
+                    <td class="col-md-3">@i</td>
+                    <td class="col-md-3">@data.category</td>
+                    <td class="col-md-3" style="color:blue">@data._date</td>
+                    <td class="col-md-3">@data.money</td>
+                    <td class="col-md-3">@data.remark</td>
+                </tr>
+            }
+        </table>
+    </div>
+</div>
